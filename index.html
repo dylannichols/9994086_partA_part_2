@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-        
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<style>
+body {
+    background-image: url("plane2.jpg");
+} 
+</style>
 </head>
-<body>
-    <p id="instruct">Use the box below to book a seat, enter 1 for for first-class or 2 for economy</p>
-
-    <form id="form">
-        <input type="text" id="input">
-        <input type="submit" id="submit">
-    </form>
-
-    <p id="success"></p>
+  <body>
+      <div class="container">
+            <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col-7">
+                        <h3 class="text-center" style="padding-top:100px">Welcome to Rotovegas Airlines</h3>
+                      <form id="form" style="padding-top:50px">
+                          <div class="form-group">
+                              <strong id="instruct">Use the box below to book a seat, enter 1 for for first-class or 2 for economy</strong>
+                        <input type="text" class="form-control" id="input">
+                          
+                        </div>
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                        
+                    </form>
+                    </div>
+                    <div class="col">
+                    </div>
+                  </div>
+                </div>
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>

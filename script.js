@@ -1,3 +1,9 @@
+/* Books flights for the user. User can choose first-class or economy, program will notify them if a section is full. Users can book as many seats
+as they want until the flight is full. Bookings are not logged in an external file but user receives feedback based on their input and the
+status of the seats.
+
+Version 1.0 Dylan Nichols 2017 */
+
 // This blocks connects the HTML objects to variables and sets up an array to hold booking information
 let input = document.querySelector("#input")
 let submit = document.querySelector("#submit")
