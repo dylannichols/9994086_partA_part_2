@@ -19,7 +19,7 @@ for (var i = 0; i < seats.length; i++) {
 // check if any seats are available for the chosen input, and if so, book a seat
 let checkSeats = () => {
     let seatNumber = 0
-    if (input.value == "1") {           // if the user wants first class, iterate through first five seats, and book if one is available
+    if (input.value == "1") { // if the user wants first class, iterate through first five seats, and book if one is available
         for (let i = 0; i < 5; i++) {
             if (seats[i] != true) {
                 seats[i] = true
@@ -27,7 +27,7 @@ let checkSeats = () => {
                 break
             }
         }
-    } else if (input.value == "2") {    // same for economy
+    } else if (input.value == "2") { // same for economy
         for (let i = 5; i < 10; i++) {
             if (seats[i] != true) {
                 seats[i] = true
@@ -36,7 +36,7 @@ let checkSeats = () => {
             }
         }
     } else {
-        seatNumber = -1;                // if input was invalid, return -1
+        seatNumber = -1; // if input was invalid, return -1
     }
     return seatNumber
 }
@@ -48,7 +48,7 @@ let seatsFull = () => {
         if (!seats[i]) {
             emptySeat = i
             break
-        } 
+        }
     }
 
     if (emptySeat < 5) {
@@ -59,7 +59,7 @@ let seatsFull = () => {
         step = 3
     } else {
         form.outerHTML = ""
-        instruct.innerHTML = "All seats are booked. Thank you for booking with Rotovegas Airlines, your flight leaves in three hours."
+        instruct.innerHTML = "All seats are booked. Thank you for booking with Rotovegas Airways, your flight leaves in three hours."
     }
 }
 
@@ -78,11 +78,11 @@ let sectionFull = () => {
             form.outerHTML = ""
             instruct.innerHTML = "All seats are booked. Thank you for booking with Rotovegas airlines, your flight leaves in three hours."
         } else {
-        instruct.innerHTML = `You have booked seat ${seatNumber}, would you like to book another?`
+            instruct.innerHTML = `You have booked seat ${seatNumber}, would you like to book another?`
         }
     } else if (input.value == "N" || input.value == "n") {
         form.outerHTML = ""
-        instruct.innerHTML = "Thank you for booking with Rotovegas airlines, your flight leaves in three hours."
+        instruct.innerHTML = "Thank you for booking with Rotovegas Airways, your flight leaves in three hours."
     } else {
         instruct.innerHTML = "Invalid input. Please enter Y if you want to book another seat or N if you do not."
     }
@@ -95,18 +95,18 @@ let submitForm = () => {
         if (seatNumber == -1) {
             instruct.innerHTML = "Invalid input. Please enter 1 for first-class or 2 for economy"
         } else if (seatNumber == 0) {
-            seatsFull()         // input was valid but no seat was booked, check what happened
+            seatsFull() // input was valid but no seat was booked, check what happened
         } else {
             instruct.innerHTML = `You have booked seat ${seatNumber}, would you like to book another? Enter Y for yes or N for no.`
             step = 2
         }
-    } else if (step == 2) {     // asks user if they want to book another seat
+    } else if (step == 2) { // asks user if they want to book another seat
         if (input.value == "Y" || input.value == "y") {
             instruct.innerHTML = "Use the box below to book a seat, enter 1 for for first-class or 2 for economy"
             step = 1
         } else if (input.value == "N" || input.value == "n") {
             form.outerHTML = ""
-            instruct.innerHTML = "Thank you for booking with Rotovegas airlines, your flight leaves in three hours."
+            instruct.innerHTML = "Thank you for booking with Rotovegas Airways, your flight leaves in three hours."
         } else {
             instruct.innerHTML = "Invalid input. Please enter Y if you want to book another seat or N if you do not."
         }
@@ -115,4 +115,7 @@ let submitForm = () => {
     }
 }
 
-submit.addEventListener('click', (e) => {submitForm(); e.preventDefault()})         // if user clicks submit, call the above function
+submit.addEventListener('click', (e) => {
+        submitForm();
+        e.preventDefault()
+    }) // if user clicks submit, call the above function
